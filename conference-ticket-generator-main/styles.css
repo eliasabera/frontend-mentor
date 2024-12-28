@@ -1,0 +1,131 @@
+:root {
+  --Neutral-0: hsl(0, 0%, 100%);
+  --Neutral-300: hsl(252, 6%, 83%);
+  --Neutral-500: hsl(245, 15%, 58%);
+  --Neutral-700: hsl(245, 19%, 35%);
+  --Neutral-900: hsl(248, 70%, 10%);
+  --Orange-500: hsl(7, 88%, 67%);
+  --Orange-700: hsl(7, 71%, 60%);
+  --Gradient: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+  --Font-size-labels-: 20px;
+  --Mobile: 375px;
+  --Desktop: 1440px;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url(assets/fonts/static/Inconsolata-Bold.ttf) format("ttf"),
+    url(assets/fonts/static/Inconsolata-Regular.ttf) format("ttf"),
+    url(assets/fonts/static/Inconsolata-ExtraBold.ttf) format("ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("assets/images/background-desktop.png"),
+    url("assets/images/pattern-lines.svg");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat, no-repeat;
+  font-family: "Inconsolata";
+  height: 100vh;
+  color: var(--Neutral-0);
+}
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  height: 30rem;
+}
+header {
+  display: grid;
+  justify-content: center;
+}
+header h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.upload-container {
+  margin-top: 1rem;
+}
+.upload-btn-container {
+  place-items: center;
+  border: 1px solid #fff;
+}
+.image-upload {
+  display: none;
+}
+.inputs-container {
+  display: grid;
+}
+.inputs-container input {
+  height: 2rem;
+  color: var(--Neutral-0);
+}
+.inputs-container input::placeholder {
+  color: var(--Neutral-0);
+}
+@media screen and (min-width: 1440px) {
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    height: 40rem;
+    place-items: center;
+  }
+  header {
+    display: grid;
+    justify-content: center;
+  }
+  header h2 {
+    width: 50rem;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  header p {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .upload-container {
+    margin-top: 1rem;
+  }
+  .upload-btn-container {
+    place-items: center;
+    border: 2px dashed;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 30rem;
+  }
+  .info p {
+    display: inline-block;
+  }
+  .image-upload {
+    display: none;
+  }
+  .inputs-container {
+    display: grid;
+  }
+  .inputs-container input {
+    width: 30rem;
+    height: 2.5rem;
+    border-radius: 10px;
+
+    color: var(--Neutral-0);
+  }
+  .inputs-container input::placeholder {
+    color: var(--Neutral-0);
+  }
+  .btn-generate {
+    margin-top: 1rem;
+    width: 30rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: var(--Orange-700);
+  }
+}
